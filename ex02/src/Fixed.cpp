@@ -6,7 +6,7 @@
 /*   By: schouite <schouite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 13:48:19 by schouite          #+#    #+#             */
-/*   Updated: 2026/10/19 15:29:37 by schouite         ###   ########.fr       */
+/*   Updated: 2026/10/21 23:06:48 by schouite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,14 +127,14 @@ Fixed Fixed::operator*(const Fixed &other) const
 {
 	Fixed res;
 
-	res._value = _value * other._value;
+	res._value = _value * other._value / (1 << _fractionalBits);
 	return (res);
 }
 Fixed Fixed::operator/(const Fixed &other) const
 {
 	Fixed res;
 
-	res._value = _value / other._value;
+	res._value = _value * (1 << _fractionalBits) / other._value;
 	return (res);
 }
 Fixed &Fixed::operator++()
