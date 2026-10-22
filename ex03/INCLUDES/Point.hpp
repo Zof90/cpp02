@@ -6,7 +6,7 @@
 /*   By: schouite <schouite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 15:59:14 by schouite          #+#    #+#             */
-/*   Updated: 2026/10/22 11:32:38 by schouite         ###   ########.fr       */
+/*   Updated: 2026/10/22 12:01:45 by schouite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,8 @@ bool		bsp(Point const a, Point const b, Point const c, Point const point);
 bool		areOnSameSide(const Fixed point_diff, const Fixed opposite_diff);
 const Fixed	getPointSide(Point const ref_side, Point tested_side,
 				Point const p);
-const Fixed	handleVertical(const Point ref_side, const Point opposite_diff,
-				const Point point);
-const Fixed	handleHorizontal(const Point ref_side, const Point opposite_diff,
-				const Point point);
-const Fixed	handleStandard(const Point ref_side, const Point opposite_diff,
+const Fixed	handleVertical(const Point tested_side, const Point point);
+const Fixed	handleHorizontal(const Point tested_side, const Point point);
+const Fixed	handleStandard(const Point ref_side, const Point tested_side,
 				const Point point);
 #endif
