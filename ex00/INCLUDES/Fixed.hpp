@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FIXED_HPP
+# define FIXED_HPP
 class Fixed
 {
   public:
@@ -24,3 +26,4 @@ class Fixed
 	int _value;
 	static int const fractionalBits = 8;
 };
+#endif

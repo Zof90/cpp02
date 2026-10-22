@@ -6,7 +6,7 @@
 #    By: schouite <schouite@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/11 16:15:18 by schouite          #+#    #+#              #
-#    Updated: 2026/10/21 21:44:47 by schouite         ###   ########.fr        #
+#    Updated: 2026/10/22 10:42:12 by schouite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ INCLUDES = -IINCLUDES
 
 CFILES = $(SRC_DIR)/main.cpp \
 		 $(SRC_DIR)/Fixed.cpp \
-		 $(SRC_DIR)/Point.cpp
+		 $(SRC_DIR)/Point.cpp \
+		 $(SRC_DIR)/bsp.cpp
 		 
 OFILES = $(CFILES:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 HEADER = INCLUDES/Fixed.hpp \

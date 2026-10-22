@@ -6,12 +6,14 @@
 /*   By: schouite <schouite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 13:48:22 by schouite          #+#    #+#             */
-/*   Updated: 2026/10/19 16:48:20 by schouite         ###   ########.fr       */
+/*   Updated: 2026/10/22 10:43:41 by schouite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <ostream>
+#ifndef FIXED_HPP
+# define FIXED_HPP
+# include <iostream>
+# include <ostream>
 
 class Fixed
 {
@@ -52,3 +54,4 @@ class Fixed
 };
 
 std::ostream &operator<<(std::ostream &out, const Fixed &other);
+#endif

@@ -6,7 +6,7 @@
 /*   By: schouite <schouite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 16:18:10 by schouite          #+#    #+#             */
-/*   Updated: 2026/10/15 17:31:57 by schouite         ###   ########.fr       */
+/*   Updated: 2026/10/22 10:48:28 by schouite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,16 @@ std::ostream &operator<<(std::ostream &out, const Fixed &other)
 	value = other.toFloat();
 	out << value;
 	return (out);
+}
+int Fixed::getRawBits() const
+{
+	std::cout << "getRawBits member function called" << std::endl;
+	return (_value);
+}
+
+void Fixed::setRawBits(const int raw)
+{
+	_value = raw;
 }
 
 float Fixed::toFloat(void) const
