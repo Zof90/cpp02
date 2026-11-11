@@ -42,15 +42,15 @@ const Fixed	handleStandard(const Point ref_side, const Point tested_side,
 	Fixed	move_x;
 	Fixed	move_y;
 	Fixed	slope;
-	Fixed	start_y;
 	Fixed	diff;
 
-	slope = (tested_side.getY() - ref_side.getY()) / (tested_side.getX()
-			- ref_side.getX());
+	slope = (tested_side.getY() - ref_side.getY());
 	move_x = point.getX() - ref_side.getX();
 	move_y = move_x * slope;
-	start_y = ref_side.getY() + move_y;
-	diff = point.getY() - start_y;
+	diff = (point.getY() - ref_side.getY()) * (tested_side.getX()
+			- ref_side.getX()) - move_y;
+	if (tested_side.getX() < ref_side.getX())
+		diff = diff * Fixed(-1);
 	return (diff);
 }
 const Fixed	getPointSide(Point const ref_side, Point const tested_side,
